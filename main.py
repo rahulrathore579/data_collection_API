@@ -15,7 +15,7 @@ def get_db():
         db.close()
 
 # 📥 POST JSON
-@app.post("/collect-json/")
+@app.post("/collect-json")
 async def collect_json(request: Request, db: Session = Depends(get_db)):
     data = await request.json()
 
