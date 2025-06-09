@@ -18,8 +18,15 @@ class DealerData(BaseModel):
     date: str
     days: str
     material: str
+    Tc: int
+    Pc: int
+    Nc: int
+    order_placed: int
     purchase_quantity: float
     total_order_count_per_day: int
+    weekly_sale_of_agent_for_each_shops: float
+    stock_available_of_each_shops: float
+
 
 # Step 2: POST API to collect data
 @app.post("/submit-data")
